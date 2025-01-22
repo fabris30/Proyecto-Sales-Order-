@@ -4,30 +4,48 @@
                      title: { type:#STANDARD,
                      label: 'header',
                      value: 'Id' } }  }
-annotate view z_c_header_mf
-    with 
+
+annotate view z_c_header_mf with
 {
 
-@UI.facet :[ { id: 'header',
-               purpose: #STANDARD,
-               type: #IDENTIFICATION_REFERENCE,
-               label: 'header' 
-} ]
+  @UI.facet :[ {id: 'header',
+                 purpose: #STANDARD,
+                 type: #IDENTIFICATION_REFERENCE,
+                 label: 'header'
+              }]
 
-  @UI: { lineItem: [ { position: 10, label: 'Id', importance: #HIGH } ] }
+  @UI: { lineItem: [ { position: 10, label: 'Id', importance: #HIGH } ],
+    identification: [ { position: 10, label: 'Id' } ] }
   Id;
-  @UI: { lineItem: [ { position: 20, label: 'Email', importance: #LOW } ] }
+  @UI: { lineItem: [ { position: 20, label: 'Email', importance: #LOW } ],
+    identification: [ { position: 20, label: 'Email' } ] }
   Email;
-  @UI: { lineItem: [ { position: 30, label: 'Firstname', importance: #HIGH } ] }
+  @UI: { lineItem: [ { position: 30, label: 'Firstname', importance: #HIGH } ],
+    identification: [ { position: 30, label: 'Firstname' } ] }
   Firstname;
-  @UI: { lineItem: [ { position: 40, label: 'Lastname', importance: #HIGH } ] }
+  @UI: { lineItem: [ { position: 40, label: 'Lastname', importance: #HIGH } ],
+    identification: [ { position: 40, label: 'Lastname' } ] }
   Lastname;
-  @UI: { lineItem: [ { position: 50, label: 'Country', importance: #HIGH } ] }
+  @UI: { lineItem: [ { position: 50, label: 'Country', importance: #HIGH } ],
+    identification: [ { position: 50, label: 'Country' } ] }
   Country;
-  @UI: { lineItem: [ { position: 60, label: 'Createon', importance: #LOW } ] }
+  @UI: { lineItem: [ { position: 60, label: 'Createon', importance: #LOW } ],
+    identification: [ { position: 60, label: 'Createon' } ] }
   Createon;
-  @UI: { lineItem: [ { position: 70, label: 'Deliverydate', importance: #LOW } ] }
+  @UI: { lineItem: [ { position: 70, label: 'Deliverydate', importance: #LOW } ],
+    identification: [ { position: 70, label: 'Deliverydate' } ] }
   Deliverydate;
-  @UI: { lineItem: [ { position: 80, label: 'Orderstatus', importance: #HIGH } ] }
+  @UI: { lineItem: [ { position: 80, label: 'Orderstatus', importance: #HIGH } ],
+    identification: [ { position: 80, label: 'Orderstatus' } ] }
   Orderstatus;
+
+  @UI.facet :[ {id: 'Items',
+              purpose:  #STANDARD,
+              type:  #LINEITEM_REFERENCE,
+              label:  'ID',
+              position: 10,
+              targetElement: '_items' }]
+
+              _items;
+
 }

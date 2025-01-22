@@ -1,0 +1,39 @@
+@Metadata.layer: #CORE
+@UI: { headerInfo: { typeName: 'items',
+                     typeNamePlural: 'items',
+                     title: { type:#STANDARD,
+                     label: 'items',
+                     value: 'Id' } }  }
+annotate view z_c_items_mf with
+
+{
+  @UI.facet :[ {id: 'items',
+                 purpose: #STANDARD,
+                 type: #IDENTIFICATION_REFERENCE,
+                 label: 'items'
+  } ]
+
+  @UI: { lineItem: [ { position: 10, label: 'Id', importance: #HIGH } ] } 
+  Id;
+   @UI: { lineItem: [ { position: 20, label: 'Name', importance: #HIGH } ] }
+  Name;
+   @UI: { lineItem: [ { position: 20, label: 'Description', importance: #HIGH } ] }
+  Description;
+  @UI: { lineItem: [ { position: 30, label: 'Releasedate', importance: #HIGH } ] }
+  Releasedate;
+  @UI: { lineItem: [ { position: 40, label: 'Discontinueddate', importance: #LOW } ] }
+  Discontinueddate;
+  @UI: { lineItem: [ { position: 50, label: 'Price', importance: #HIGH } ] }
+  Price;
+  @UI: { lineItem: [ { position: 60, label: 'Height', importance: #LOW } ] }
+  Height;
+  @UI: { lineItem: [ { position: 70, label: 'Width', importance: #LOW } ] }
+  Width;
+  @UI: { lineItem: [ { position: 80, label: 'Depth', importance: #HIGH } ] }
+  Depth;
+  @UI: { lineItem: [ { position: 90, label: 'Quantity', importance: #HIGH } ] }
+  Quantity;
+  @UI: { lineItem: [ { position: 100, label: 'Unitofmeasure', importance: #LOW } ] }
+  Unitofmeasure;
+
+}

@@ -1,0 +1,5 @@
+@EndUserText.label: 'header'
+define service Z_sd_header_mf {
+  expose z_c_header_mf as header;
+  expose z_c_items_mf  as items;
+}

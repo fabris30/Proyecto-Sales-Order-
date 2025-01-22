@@ -1,8 +1,8 @@
-managed; //implementation in class zbp_i_header_mf unique;
+managed; //implementation in class zbp_i_items_mf unique;
 //strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
 
-define behavior for z_i_header_mf alias header
-persistent table ztbd_header_mf
+define behavior for z_i_items_mf alias items
+persistent table ztbd_items_mf
 lock master
 //authorization master ( instance )
 //etag master <field_name>
@@ -10,6 +10,5 @@ lock master
   create;
   update;
   delete;
-  field ( readonly: update ) Id, Email;
- // association _items {create; }
+  field ( readonly: update ) Id;
 }

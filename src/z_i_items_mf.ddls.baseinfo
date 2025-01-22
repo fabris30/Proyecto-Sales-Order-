@@ -3,12 +3,10 @@
 {
 "FROM":
 [
-"Z_I_HEADER_MF"
+"ZTBD_ITEMS_MF"
 ],
 "ASSOCIATED":
-[
-"Z_C_ITEMS_MF"
-],
+[],
 "BASE":
 [],
 "ANNO_REF":
